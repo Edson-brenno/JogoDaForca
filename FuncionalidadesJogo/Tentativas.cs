@@ -4,9 +4,8 @@ namespace jogoDaForca.FuncionalidadesJogo{
 
     public class Tentativa{
 
-        //Atributes
+        //Attributes
         //Atributos
-        private bool enforcou = false; // Case the player Lost will be true otherwise is False; Caso o jogador perca irá ser true caso contrario vai ser false
         public int TotalTentativasRestantes {get; private set;} // Remaining attempts ; Total de tentativas restantes 
 
         //Methods:
@@ -28,6 +27,7 @@ namespace jogoDaForca.FuncionalidadesJogo{
                 return true;
             }
             else { // Case the hasn't try then Will return false; Case o jogador não tenha mais tentativas vai retornar false
+        
                 return false;
             }
         }

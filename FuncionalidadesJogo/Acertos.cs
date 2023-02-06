@@ -4,7 +4,7 @@ namespace jogoDaForca.FuncionalidadesJogo{
 
     public class Acerto{
 
-        //Atributes
+        //Attributes
         //Atributos
         public int TotalAcertos {get; private set;} // Has the Total of hits; Contém o total de Acertos
 

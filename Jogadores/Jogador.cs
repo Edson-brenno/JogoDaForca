@@ -4,7 +4,7 @@ namespace jogoDaForca.Jogadores{
 
     public class Jogador{
 
-        // Atributes
+        // Attributes
         // Atributos
         public string Nickname {get; private set;} // Will achieve the player Nickname
 
