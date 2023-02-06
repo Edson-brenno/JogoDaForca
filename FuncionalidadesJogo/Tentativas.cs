@@ -1,6 +1,6 @@
 using System;
 
-namespace jogoDaForca.Jogo{
+namespace jogoDaForca.FuncionalidadesJogo{
 
     public class Tentativa{
 
