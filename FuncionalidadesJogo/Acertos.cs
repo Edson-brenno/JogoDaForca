@@ -24,13 +24,5 @@ namespace jogoDaForca.FuncionalidadesJogo{
             return true;
         }
 
-        public void Ganhou(string username){
-
-            Console.WriteLine("====================================================");
-            Console.WriteLine($"          Parabéns {username}, você ganhou         ");
-            Console.WriteLine("====================================================");
-            
-        }
-
     }
 }
