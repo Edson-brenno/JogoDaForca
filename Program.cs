@@ -1,5 +1,5 @@
 ﻿using System;
-using jogoDaForca.FuncionalidadesJogo;
+using jogoDaForca.Jogo;
 
 namespace jogoDaForca.Jogo{
 
@@ -7,8 +7,10 @@ namespace jogoDaForca.Jogo{
 
         static void Main(string[] args){
 
-            Console.WriteLine("Chegou aqui");
+            Forca tt = new Forca();
             
+            tt.Apresentacao();
+
         }
     }
 }

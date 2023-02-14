@@ -26,6 +26,7 @@ namespace jogoDaForca.FuncionalidadesJogo{
             this.Palavra = linhas[rnd.Next(0,linhas.Length)]; // Chose one word randomly
 
             this.TamanhoPalavra = this.Palavra.Length;
+
         }
 
     }
