@@ -1,10 +1,14 @@
 ﻿using System;
 using jogoDaForca.FuncionalidadesJogo;
 
-PalavraSecreta tt = new PalavraSecreta();
+namespace jogoDaForca.Jogo{
 
-Console.WriteLine(tt.Palavra);
+    public class Jogo{
 
-tt.EscolhePalavraSecreta();
+        static void Main(string[] args){
 
-Console.WriteLine(tt.Palavra);
+            Console.WriteLine("Chegou aqui");
+            
+        }
+    }
+}

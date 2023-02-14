@@ -8,6 +8,8 @@ namespace jogoDaForca.FuncionalidadesJogo{
         //Atributos
         public string Palavra {get; private set;} // the word to be discovered by the player; Palavra a ser descoberta pelo jogador
 
+        public int TamanhoPalavra {get; private set;} // Will have the length of the word; Vai ter o tamanho da palavra
+
         //Methods
         //Metodos
         
@@ -22,6 +24,9 @@ namespace jogoDaForca.FuncionalidadesJogo{
             Random rnd = new Random(); // Instance the class Random
 
             this.Palavra = linhas[rnd.Next(0,linhas.Length)]; // Chose one word randomly
+
+            this.TamanhoPalavra = this.Palavra.Length;
         }
+
     }
 }
