@@ -31,5 +31,13 @@ namespace jogoDaForca.FuncionalidadesJogo{
                 return false;
             }
         }
+
+        public void Perdeu(string username){ // Will be executed when the Player lost the game; Vai ser mostrada quando o jogador perder o jogo
+
+            Console.WriteLine("====================================================");
+            Console.WriteLine($"          {username}, você acabou perdendo :(      ");
+            Console.WriteLine("====================================================");
+            
+        }
     }
 }
