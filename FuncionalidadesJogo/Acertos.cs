@@ -19,9 +19,45 @@ namespace jogoDaForca.FuncionalidadesJogo{
 
         }
 
-        public bool AcertouPalavras(char letra, int tamanhoPalavraSecreta){
+        public bool AcertouLetras(char letra, string palavra){
 
-            return true;
+            int acertos = 0;
+
+            foreach(char c in palavra){
+                
+                if (c == letra){
+
+                    acertos++;
+
+                }
+            }
+
+            if (acertos > 0){
+                
+                AcrescentaAcertos(acertos);
+
+                return true;
+            }
+            else{
+
+                return false;
+                
+            }
+        }
+
+        public bool JaVenceu(int tamanhoPalavraSecreta){
+            
+            if (this.TotalAcertos == tamanhoPalavraSecreta){
+                
+                this.Venceu = true;
+
+                return true;
+            }
+            else{
+
+                return false;
+            }
+    
         }
 
     }
