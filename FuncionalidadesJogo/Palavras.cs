@@ -45,23 +45,39 @@ namespace jogoDaForca.FuncionalidadesJogo{
 
         }
 
-        public bool IsLetraValidaParaUso(char letra){ // Verify if the letter is valid; Verifica se a letra passa é valida
+        public void IsLetraValidaParaUso(char letra){ // Verify if the letter is valid; Verifica se a letra passa é valida
+            
+            if (Char.IsWhiteSpace(letra)){ 
 
-            if (this.LetrasUtilizadas.Length > 0){
+                throw new LetraNaoPodeSerNulaException();
+
+            }
+            else if (Char.IsDigit(letra) | Char.IsNumber(letra)){
+
+                throw new LetraNaoPodeSerNumeroException();
+
+            }
+            else if (Char.IsBetween(letra, 'a','z') || Char.IsBetween(letra, 'A','Z')){
+
+                if (this.LetrasUtilizadas.Length > 0){
                 
-                foreach (char c in this.LetrasUtilizadas){
+                    foreach (char c in this.LetrasUtilizadas){
 
-                    if (letra == c){
+                        if (letra == c){
 
 
-                        return false;
+                            throw new LetraJaFoiUtilizadaException();
 
+                        }
                     }
                 }
 
             }
+            else{
+
+                throw new LetraNaoPodeSerUmCharEspecialExeption();
+            }
             
-            return true;
         }
 
         public void AdicionarLetraUtilizada(char letra){ // Append a new letter to the Used Letters
@@ -69,6 +85,21 @@ namespace jogoDaForca.FuncionalidadesJogo{
             this.LetrasUtilizadas = this.LetrasUtilizadas.Append(letra).ToArray();
             
         }
+
+        public void PerguntarUmaLetra(){
+
+            char letra;
+
+
+            Console.WriteLine("Por favor Digite uma Letra: ");
+
+            letra = Convert.ToChar(Console.Read());
+
+            this.IsLetraValidaParaUso(letra);
+             
+            
+        }
+
 
         // public void SetaLetrasAcertadas()
 

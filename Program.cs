@@ -21,49 +21,68 @@ namespace jogoDaForca.Jogo{
 
             Acerto acerto = new Acerto();
 
-            char tt = ' ';
-
-            Console.WriteLine("Digite uma letra:");
+            int test = 0;
             
-            tt = Convert.ToChar(Console.ReadLine());
+            palavra.AdicionarLetraUtilizada('a');
+            while(test == 0){
+
+                try{
+                
+                
+
+                palavra.PerguntarUmaLetra();
+
+                test = 1;
+
+                }
+                catch(Exception ex){
+
+                    Console.WriteLine(ex.Message);
+                    
+                    
+                }
+            }           
             
-            if (palavra.IsLetraValidaParaUso(tt)){
-
-                acerto.AcertouLetras(tt, palavra.PalavraSecreta);
-
-                Console.WriteLine($"O total de acertos foi {acerto.TotalAcertos}");
-
-                acerto.JaVenceu(palavra.TamanhoPalavraSecreta);
-
-                Console.WriteLine($"O jogador já venceu? {acerto.Venceu}");
-
-                palavra.AdicionarLetraUtilizada(tt);
-            }
-            else{
-
-                Console.WriteLine("A letra ja joi utilizada");
-            }
-
-            Console.WriteLine("Digite uma letra:");
             
-            tt = Convert.ToChar(Console.ReadLine());
             
-            if (palavra.IsLetraValidaParaUso(tt)){
+            
+        //     if (palavra.IsLetraValidaParaUso(tt)){
 
-                acerto.AcertouLetras(tt, palavra.PalavraSecreta);
+        //         acerto.AcertouLetras(tt, palavra.PalavraSecreta);
 
-                Console.WriteLine($"O total de acertos foi {acerto.TotalAcertos}");
+        //         Console.WriteLine($"O total de acertos foi {acerto.TotalAcertos}");
 
-                acerto.JaVenceu(palavra.TamanhoPalavraSecreta);
+        //         acerto.JaVenceu(palavra.TamanhoPalavraSecreta);
 
-                Console.WriteLine($"O jogador já venceu? {acerto.Venceu}");
+        //         Console.WriteLine($"O jogador já venceu? {acerto.Venceu}");
 
-                palavra.AdicionarLetraUtilizada(tt);
-            }
-            else{
+        //         palavra.AdicionarLetraUtilizada(tt);
+        //     }
+        //     else{
 
-                Console.WriteLine("A letra ja joi utilizada");
-            }
-        }
+        //         Console.WriteLine("A letra ja joi utilizada");
+        //     }
+
+        //     Console.WriteLine("Digite uma letra:");
+            
+        //     tt = Convert.ToChar(Console.ReadLine());
+            
+        //     if (palavra.IsLetraValidaParaUso(tt)){
+
+        //         acerto.AcertouLetras(tt, palavra.PalavraSecreta);
+
+        //         Console.WriteLine($"O total de acertos foi {acerto.TotalAcertos}");
+
+        //         acerto.JaVenceu(palavra.TamanhoPalavraSecreta);
+
+        //         Console.WriteLine($"O jogador já venceu? {acerto.Venceu}");
+
+        //         palavra.AdicionarLetraUtilizada(tt);
+        //     }
+        //     else{
+
+        //         Console.WriteLine("A letra ja joi utilizada");
+        //     }
+        // }
     }
-}
+}}
